@@ -62,13 +62,15 @@
    git commit -m "Update sample.txt with new content"
    ```
 
-4. **Push** your changes to the remote branch:
+4. **Push** your changes to the remote branch: Go to Github Create a repository without readme file, and follow the 1st instruction
+
+create a remote : git remote add origin "your url"
 
    ```bash
    git push origin feature-branch
    ```
 
-5. **Pull** the latest changes from the remote branch:
+6. **Pull** the latest changes from the remote branch:
 
    ```bash
    git pull origin feature-branch
