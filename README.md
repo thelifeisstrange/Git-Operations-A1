@@ -85,13 +85,16 @@
    git merge feature-branch
    ```
 
-2. **Rebase** `feature-branch` onto `master`:
+2. **Directly Rebase** `feature-branch` onto `master`:
 
    ```bash
    git checkout feature-branch
    git rebase master
    ```
 
+> **Note**: This command directly re-applies the changes from `feature-branch` onto `master` without any interactive rebase. It rewrites the commit history to make it appear as if the changes in `feature-branch` were made on top of the latest `master`.
+
+---
 
 ### 5. Squash Commits
 
@@ -108,13 +111,7 @@
 
 ### 6. Delete Branches
 
-1. Delete a **local branch**:
-
-   ```bash
-   git branch -d feature-branch
-   ```
-
-2. Force delete a **local branch** (if it hasn’t been merged):
+Force delete a **local branch** (if it hasn’t been merged):
 
    ```bash
    git branch -D feature-branch
@@ -124,50 +121,9 @@
 
 ### 7. Undo Commits
 
-1. Undo the last commit but keep changes staged:
-
-   ```bash
-   git reset --soft HEAD~1
-   ```
-
-2. Undo the last commit and unstage changes:
+Undo the last commit and unstage changes:
 
    ```bash
    git reset HEAD~1
    ```
 
-3. Undo the last commit and discard all changes:
-
-   ```bash
-   git reset --hard HEAD~1
-   ```
-
----
-
-## Example Workflow
-
-1. **Initialize repository and create branches**:
-   - `main` branch as the default branch.
-   - `feature-branch` for feature development.
-
-2. **Add and commit changes**:
-   - First commit: `Add sample.txt with initial content`.
-   - Second commit: `Update sample.txt with new content`.
-
-3. **Merge** `feature-branch` into `main`.
-
-4. **Squash** the two commits on `feature-branch` for a clean history.
-
-5. **Delete** `feature-branch` after merging.
-
----
-
-## Tips
-
-- Use `git status` to check the current state of your repository.
-- Use `git log` to view commit history.
-
----
-
-This guide covers essential Git commands and operations. Follow the steps to practice and complete your Git assignment.
-```
