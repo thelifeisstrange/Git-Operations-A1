@@ -1,24 +1,3 @@
-Here is the updated README file in Markdown format with adjustments based on the initial commit requirement before creating branches.
-
-```markdown
-# Git Workflow Assignment
-
-This README provides step-by-step instructions on common Git operations, including creating repositories, branching, committing, merging, rebasing, squashing, and more.
-
----
-
-## Prerequisites
-
-- Ensure Git is installed on your machine.
-- Configure Git with your name and email if you haven’t done so already:
-
-  ```bash
-  git config --global user.name "Your Name"
-  git config --global user.email "your.email@example.com"
-  ```
-
----
-
 ## Instructions
 
 ### 1. Create a Repository
@@ -99,23 +78,20 @@ This README provides step-by-step instructions on common Git operations, includi
 
 ### 4. Merge and Rebase
 
-1. **Merge** `feature-branch` into `main`:
+1. **Merge** `feature-branch` into `master`:
 
    ```bash
-   git checkout main
+   git checkout master
    git merge feature-branch
    ```
 
-2. **Rebase** `feature-branch` onto `main`:
+2. **Rebase** `feature-branch` onto `master`:
 
    ```bash
    git checkout feature-branch
-   git rebase main
+   git rebase master
    ```
 
-> **Note**: Be careful with rebasing when working with shared branches, as it rewrites commit history.
-
----
 
 ### 5. Squash Commits
 
